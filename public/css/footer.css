@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans 3', sans-serif;
+    text-decoration: none;
+   
+}
+.button__container {
+    display: flex;
+    justify-content: flex-end; 
+    margin-top: 10px; 
+}
+
+.content__footer{
+    padding-left: 40px;
+    padding-right: 40px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    background: black;
+}
+
+.content__info{
+    height: 100%;
+    width: 600px;
+    margin-top: 18px;
+    background: black;
+}
+
+.input__list{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: black;
+}
+
+
+.input__item{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    margin: 30px 0;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: white;
+    background-color: transparent;
+}
+
+.input__item:hover{
+    border-bottom: 2px solid rgb(56, 181, 190); 
+}
+
+.input__item label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    font-size: 20px; 
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: white;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .3s ease-out;
+}
+
+.input__item input:focus + label,
+.input__item input:not(:placeholder-shown) + label {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.input__item input{
+    width: 100%;
+    height: 100%;
+
+    background-color: black;
+
+    font-size: 25px; 
+
+    border: none;
+    outline: none;
+    color: white;
+}
+span{
+    width: 100%;
+    height: 100%;
+    font-size: 16px; 
+    border: none;
+    outline: none;
+    color: rgb(255, 19, 19); 
+}
+.button__start{
+    
+    width: 200px;
+    height: 50px;
+    margin-left: 60px;
+    margin-top: 25px;
+    background: rgb(56, 181, 190); 
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    transition: 0.5s ease;
+}
+
+.button__start:hover{
+    background: rgb(255, 255, 255); 
+    color: rgb(56, 181, 190); 
+    
+}
+
+@media  screen and (max-width: 871px) {
+    .content__footer{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .content__info{
+        width: 100%;
+        margin-top: 10px;
+        text-align: center;
+    }
+    .input__list{
+       flex-direction: column;
+    }
+
+    .button__start{   
+        width: 200px;
+        height: 50px;
+        margin-left: 0px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .input__item label{
+        font-size: 0.8em;
+    }
+
+}
+

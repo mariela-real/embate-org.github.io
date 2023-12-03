@@ -1,0 +1,244 @@
+.content__advice{
+    margin-top: 100px;
+    font-family: 'Source Sans 3', sans-serif;
+    text-decoration: solid;
+    display: flex;
+    flex-direction: column;
+}
+
+.content__advice .advice__start h2{
+    padding-bottom: 20px;
+}
+
+.content__advice .advice__steps h3{
+    padding-bottom: 20px;
+}
+
+.advice__start{
+    border: 2px solid rgb(0, 0, 0);
+    padding: 30px 30px 30px 30px;
+    color: black;
+    margin: 50px 400px 20px 200px;
+}
+
+.advice__steps{
+    border: 2px solid rgb(0, 0, 0);
+    padding: 30px 30px 30px 30px;
+    margin: 50px 200px 20px 400px;
+}
+
+.button__send{
+    
+    width: 200px;
+    height: 50px;
+    margin-left: 180px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    background: rgb(56, 181, 190); 
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 700;
+    transition: 0.5s ease;
+}
+
+.button__send:hover{
+    border: 2px solid rgb(56, 181, 190);
+    background: rgb(255, 255, 255); 
+    color: rgb(56, 181, 190); 
+    
+}
+
+@media (max-width: 1044px){
+    .advice__start{
+        margin: 50px 300px 20px 100px;
+    }
+    
+    .advice__steps{
+        margin: 50px 100px 20px 300px;
+    }
+    
+    .button__send{
+        margin-left: 80px;
+    }
+}
+
+@media (max-width: 854px){
+    .advice__start{
+        margin: 50px 200px 20px 50px;
+    }
+    
+    .advice__steps{
+        margin: 50px 50px 20px 200px;
+    }
+    
+    .button__send{
+        margin-left: 50px;
+    }
+}
+
+@media (max-width: 542px){
+    .advice__start{
+        margin: 50px 50px 20px 50px;
+    }
+    
+    .advice__steps{
+        margin: 50px 50px 20px 50px;
+    }
+    
+    .button__send{
+        margin-left: 50px;
+    }
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+}
+.left{
+    background: #ffffff;
+    
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    margin-top: 50px;
+}
+.right{
+    background: #201f1f;
+    width: 30%;
+   
+    margin-top: 50px;
+}
+#split-screen{
+    display: flex;
+    margin-top: 50px;
+    
+    text-align: center;
+}
+.creative{
+    color:#ffffff;
+}
+.left h1{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 3.1rem;
+    color: rgb(0, 0, 0);
+    margin: auto;
+    margin-bottom: 2rem;
+   
+    margin-top: 1rem;
+    width:500px;
+}
+.right h2{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2.5rem;
+    color: rgb(255, 255, 255);
+    margin-bottom: 3rem;
+    margin-left: 2rem;
+    margin-top: 8rem;
+}
+.left p{
+    color: rgb(0, 0, 0);
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin: auto;
+    text-align: justify;
+    width:500px;
+}
+.to-line-up{
+    margin-left: 5rem;
+}
+.left img{
+	width:200px;
+	
+	margin-top: 5rem;
+}
+
+
+
+
+
+/*ESTILOS IMAGENES EMPRESAS*/
+.right .right_images {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.right .right_images .image {
+    width: 100%;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.right .right_images .image img{
+    width: 25vw;
+    height: 30vh;
+    border-radius: 70px;
+
+    padding: 20px 40px 20px 40px;
+    
+}
+
+@media (max-width: 1090px){
+    .right .right_images .image img{
+
+        border-radius: 55px;
+    
+     
+        
+    }
+}
+
+
+@media (max-width: 760px){
+    #split-screen{
+        display: flex;
+        margin-top: 100px;
+        
+        flex-direction: column;
+    }
+    .right{
+        width: 100%;
+      
+        margin-top: 0px;
+    }
+    .left{
+        
+        width: 100%;
+    }
+
+    .right h2 {
+        margin-bottom: 20px;
+        margin-top: 50px;
+    }
+
+    .right .right_images {
+       
+        grid-template-columns: 1fr 1fr;
+     
+    }
+
+    .right .right_images .image img{
+        width: 90%;
+        height: 200px;
+        border-radius: 40px;
+    
+        padding: 10px 10px 10px 10px;
+        
+    }
+    
+}

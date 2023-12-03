@@ -1,0 +1,159 @@
+*{
+    font-family: 'Source Sans 3', sans-serif;
+}
+.content__mission{
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+}
+
+.content__mission .mission_title{
+    padding: 80px 0px 0px 80px;
+    font-weight: bold;
+    font-size: 23px;
+}
+
+.content__mission .mission_vision{
+    padding: 50px 50% 10px 150px;
+    text-align: justify;
+
+    display: flex;
+    flex-direction: row;
+
+}
+
+.content__mission .mission_mission{
+    padding: 50px 150px 50px 50%;
+    text-align: justify;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.content__mission p{
+    padding-top: 10px;
+    font-weight: bold;
+}
+.content__mission h2{
+    padding-bottom: 10px;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.content__mission .mission_vision .vision__logo img{
+
+    width: 100px;
+    height: 100px;
+    margin-top: 0px;
+    margin-right: 50px;
+
+}
+
+.content__mission .mission_mission .mission__logo img{
+
+   width: 100px;
+   height: 100px;
+   margin-top: 50px;
+   margin-left: 50px;
+
+}
+
+.line_tricolor{
+    width: 10%;
+    height: 10px;
+    background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(215, 226, 241), rgb(186, 216, 223));
+}
+
+
+@media (max-width: 1174px){
+    .content__mission .mission_vision{
+        padding: 50px 20% 10px 150px;
+
+
+    }
+    .content__mission .mission_mission{
+        padding: 50px 150px 10px 20%;
+
+
+    }
+}
+
+
+
+@media (max-width: 726px){
+    .content__mission .mission_vision{
+        padding: 50px 50px 10px 50px;
+
+
+    }
+    .content__mission .mission_mission{
+        padding: 50px 50px 0px 50px;
+
+
+    }
+}
+
+/* VALORES */
+
+.content__mission{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+}
+
+.content__values .values_title{
+    padding: 10px 0px 0px 80px;
+    font-weight: bold;
+    font-size: 23px;
+}
+
+.values_list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+.values_item{
+
+    padding: 40px;
+    text-align: center;
+}
+
+.values_item img{
+    width: 100px;
+    height: 100px;
+}
+
+.values_item h1{
+    color: rgb(56, 181, 190);
+    padding-bottom: 40px;
+    font-size: 40px;
+}
+
+.values_item p{
+    text-align: justify;
+    font-weight: bold;
+}
+
+@media (max-width: 922px){
+    .values_list{
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 473px){
+    .values_item h1{
+        font-size: 8vw;
+    }
+
+    .values_list{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}

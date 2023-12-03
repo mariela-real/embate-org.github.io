@@ -1,0 +1,77 @@
+
+.container-fluid{
+    background: rgb(239, 245, 245);
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+
+    
+}
+
+
+.login_form{
+    background-color: rgb(255, 255, 255);
+    
+    width: 500px;
+    height: 550px;
+    position: relative;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+   /* margin-top: 150px;
+    margin-bottom: 50px;*/
+}
+
+#formularioEditar{
+    padding: 20px;
+}
+
+#formularioEditar h3{
+    padding-bottom: 35px;
+    text-align: center; 
+    font-size: 40px;
+    color: rgb(56, 181, 190);
+    font-weight: bold;
+}
+
+#formularioEditar .logo_login{
+    display: flex;
+  
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+#formularioEditar .logo_login img{
+   width: 180px;
+   height: 150px;
+   backdrop-filter: blur(0px);
+
+}
+
+.login_buttom button{
+    background-color: rgb(56, 181, 190);
+    border: 2px solid rgb(56, 181, 190);
+    transition: 0.3s ease;
+    margin-top: 40px;
+    
+}
+
+.login_buttom button:hover{
+    background-color: white;
+    border: 2px solid rgb(56, 181, 190);
+    color: rgb(56, 181, 190);
+}
+
+
+.btn {
+    position: relative;
+    padding: 20px 40px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    justify-items: end;
+}
