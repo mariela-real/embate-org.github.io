@@ -21,9 +21,11 @@
                 </div>
                 <div class = "form-group">
                     <label for="urlphoto">Seleccione una imagen</label> <br>
+                    
                     <img src="/img/carousel/" >
                     {!! Form::file('urlphoto')!!}
                 </div>
+                
             </div>
             {!! Form::submit('Guardar',['class'=>'btn btn-success']) !!}
             {!! Form::close() !!}
