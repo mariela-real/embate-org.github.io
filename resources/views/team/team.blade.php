@@ -41,7 +41,7 @@
             <div class="grid__item">
                 <img src="img/team/{{$item->urlphoto}}" alt="">
                 <h3>{{$item->name}}</h3>
-                <p>{{$item->description}}</p>
+                <p>{!!$item->description!!}</p>
                 <button onclick="window.location.href='{{$item->urlprofile}}'" class="button__link">Ver Linkedin</button>
             </div>
             @empty

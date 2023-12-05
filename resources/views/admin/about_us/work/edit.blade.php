@@ -12,10 +12,10 @@
                 </div>
                 <div class = "form-group">
                     <label for="description">Ingrese la descripcion</label>
-                    {!! Form::text('description',$work->description, ['class'=>'form-control'])!!}
+                    {!! Form::textarea('description',$work->description, ['class'=>'ckeditor form-control'])!!}
                 </div>
                 <div class = "form-group">
-                    <label for="video">Seleccione un video</label> <br>
+                    <label for="video">Seleccione un video</label> <br><br><br>
                     <source src="/videos/work/{{$work->video}}" type="video/mp4">
                     {!! Form::file('video')!!}
                 </div>
@@ -30,3 +30,4 @@
 
 @endsection
 
+<script src="{{ asset('/vendors/ckeditor/ckeditor.js') }}"></script>

@@ -67,7 +67,7 @@ Route::post('/service', [ServiceRequestsController::class, 'sendScheduleAdvice']
 
  /* ------------------------------------RUTAS CON INICIO DE SESION---------------------------------------- */
 Route::group(['middleware' => 'auth'], function() {
-    Route::get('/dashboard', function(){return view('home');});
+    Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
     Route::get('/users/create', [App\Http\Controllers\UserController::class, 'create'])->name('users.create');
     Route::post('/users', [App\Http\Controllers\UserController::class, 'store'])->name('users.store');
     Route::get('/users', [App\Http\Controllers\UserController::class, 'index'])->name('users.index');

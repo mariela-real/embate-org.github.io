@@ -17,7 +17,6 @@
                 </div>
                 <div class = "form-group">
                     <label for="urlphoto">Seleccione una imagen</label> <br>
-                    <img src="/img/team/" >
                     {!! Form::file('urlphoto')!!}
                 </div>
                 <div class = "form-group">

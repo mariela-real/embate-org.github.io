@@ -24,11 +24,11 @@
         @empty
         @endforelse
 
-        @forelse ($work as $item)
+        @forelse ($work as $item2)
            <div class="work_body">
                 <div class="body_description">
                     <p>
-                    {{$item->description}}
+                    {{$item2->description}}
                     </p>
                     <button type="submit" class="button__link">Contáctenos</button>
                 </div>
@@ -36,7 +36,7 @@
 
                 <div class="body_image">
                     <video width="500" controls>
-                        <source src="/videos/work/{{$item->video}}" type="video/mp4">
+                        <source src="/videos/work/{{$item2->video}}" type="video/mp4">
                         Tu navegador no soporta la etiqueta de video.
                     </video>
                 </div>

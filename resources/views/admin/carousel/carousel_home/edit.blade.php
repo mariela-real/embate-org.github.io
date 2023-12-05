@@ -7,10 +7,6 @@
             {!! Form::open(['route'=>['carousel.update', $carousel], 'method'=>'PUT','files'=>true])!!}
             <div class = "jumbotron">
                 <div class = "form-group">
-                    <label for="description">Ingrese la descripcion</label>
-                    {!! Form::text('description',$carousel->description, ['class'=>'form-control'])!!}
-                </div>
-                <div class = "form-group">
                     <label for="link">Ingrese un enlace</label>
                     {!! Form::text('link',$carousel->link, ['class'=>'form-control','maxlength'=>'67'])!!}
                 </div>
@@ -19,7 +15,7 @@
                     {!! Form::text('order',$carousel->order, ['class'=>'form-control','maxlength'=>'67'])!!}
                 </div>
                 <div class = "form-group">
-                    <label for="urlphoto">Seleccione una imagen</label>
+                    <label for="urlphoto">Imagen</label>
                     <img src="/img/carousel/{{$carousel->urlphoto}}">
                     {!! Form::file('urlphoto')!!}
                 </div>

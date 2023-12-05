@@ -1,4 +1,4 @@
-<footer class="footer">
+<!--<footer class="footer">
   <div class="container-fluid">
     <nav class="float-left">
 
@@ -11,4 +11,4 @@
       <a href="https://www.creative-tim.com" target="_blank">Embate</a>
     </div>
   </div>
-</footer>
+</footer>-->

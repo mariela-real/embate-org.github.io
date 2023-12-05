@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-//use Image;
+use Image;
 use App\Models\Team;
 class TeamController extends Controller
 {

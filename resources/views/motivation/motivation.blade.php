@@ -96,7 +96,7 @@
                         Conoce algunas de nuestras experiencias
                 </h4>
 
-                <p>{{$item->description}}</p>
+                <p>{!!$item->description!!}</p>
 
                 <h3> {{$item->name}}</h3>
 

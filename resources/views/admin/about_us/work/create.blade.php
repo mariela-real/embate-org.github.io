@@ -4,7 +4,7 @@
     <div class= "row">
 
         <div class = "col-sm-10">
-            {!! Form::open(['route'=>['how_to_work.store',$work],'method'=>'POST','files'=>true])!!}
+            {!! Form::open(['route'=>['how_to_work.store'],'method'=>'POST','files'=>true])!!}
 
             <div class = "jumbotron">
                 <div class = "form-group">
@@ -13,7 +13,7 @@
                 </div>
                 <div class = "form-group">
                     <label for="description">Ingrese la descripcion</label>
-                    {!! Form::text('description',null, ['class'=>'form-control'])!!}
+                    {!! Form::textarea('description',null, ['class'=>'ckeditor form-control'])!!}
                 </div>
                 <div class = "form-group">
                     <label for="video">Seleccione un video</label> <br>
@@ -36,3 +36,4 @@
 
 @endsection
 
+<script src="{{ asset('/vendors/ckeditor/ckeditor.js') }}"></script>

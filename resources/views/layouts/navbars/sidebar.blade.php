@@ -13,37 +13,39 @@
   <div class="sidebar-wrapper">
     <ul class="nav">
       <li class="nav-item{{ $activePage == 'dashboard' ? ' active' : '' }}">
-        <a class="nav-link" href="{{ route('home') }}">
+        <a class="nav-link" href="{{ route('dashboard') }}">
           <i class="material-icons">dashboard</i>
             <p>{{ __('Dashboard') }}</p>
         </a>
       </li>
-
+      @can('user_index')
       <li class="nav-item{{ $activePage == 'users' ? ' active' : '' }}">
         <a class="nav-link" href="{{ route('users.index') }}">
           <i class="material-icons">content_paste</i>
             <p>Usuarios</p>
         </a>
       </li>
+      @endcan
 
-
-
+      @can('permission_index')
       <li class="nav-item{{ $activePage == 'permissions' ? ' active' : '' }}">
         <a class="nav-link" href="{{ route('permissions.index') }}">
           <i class="material-icons">bubble_chart</i>
           <p>{{ __('Permisos') }}</p>
         </a>
       </li>
-
+      @endcan
+      @can('role_index')
       <li class="nav-item{{ $activePage == 'roles' ? ' active' : '' }}">
         <a class="nav-link" href="{{ route('roles.index') }}">
           <i class="material-icons">location_ons</i>
             <p>{{ __('Roles') }}</p>
         </a>
       </li>
+      @endcan
 
-      <li class="nav-item {{ ($activePage == 'profile' || $activePage == 'user-management') ? ' active' : '' }}">
-        <a class="nav-link" data-toggle="collapse" href="#laravelExample" aria-expanded="true">
+      <li class="nav-item {{ $activePage == 'pagina' ? ' active' : '' }}">
+        <a class="nav-link"  href="carousel" aria-expanded="false">
           <i><img style="width:25px" src="{{ asset('img/laravel.svg') }}"></i>
           <p>{{ __('Pagina') }}
             <b class="caret"></b>
@@ -51,6 +53,7 @@
         </a>
         <div class="collapse show" id="laravelExample">
           <ul class="nav">
+
             <li class="nav-item{{ $activePage == 'carousel' ? ' active' : '' }}">
               <a class="nav-link" href="/carousel">
                 <span class="sidebar-mini"> I </span>
@@ -72,6 +75,7 @@
           </ul>
         </div>
       </li>
+
     </ul>
   </div>
 </div>

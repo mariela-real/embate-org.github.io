@@ -17,7 +17,7 @@
                     @forelse ($team as $item)
                     <tr>
                         <td>{{$item->name}}</td>
-                        <td>{{$item->description}}</td>
+                        <td>{!!$item->description!!}</td>
                         <td><img src="/img/team/{{$item->urlphoto}}" width="200"></td>
                         <td>
                            <a href="{{route('team_profile.edit', $item->id) }}" class="btn btn-success">Editar</a>

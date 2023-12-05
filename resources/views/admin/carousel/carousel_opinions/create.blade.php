@@ -1,5 +1,4 @@
 @extends('layouts.main', ['activePage' => 'process', 'titlePage' => __('Procesos')])
-
 @section('content')
 <div class="container-fluid">
     <div class="row">
@@ -8,8 +7,10 @@
 
             <div class="jumbotron">
                 <div class="form-group">
-                    <label for="description">Ingrese la descripcion</label>
-                    {!! Form::textarea('description',null, ['class'=>'ckeditor form-control','maxlength'=>'67','id'=>'body'])!!}
+
+                    <label for="description">Ingrese un nombre</label>
+                    {!! Form::textarea('description',null, ['class'=>'ckeditor form-control'])!!}
+
                 </div>
                 <div class="form-group">
                     <label for="name">Ingrese un nombre</label>
@@ -26,10 +27,4 @@
     </div>
 </div>
 @endsection
-<script>
-    ClassicEditor
-        .create( document.querySelector( '#body' ) )
-        .catch( error => {
-            console.error( error );
-        } );
-</script>
+<script src="{{ asset('/vendors/ckeditor/ckeditor.js') }}"></script>

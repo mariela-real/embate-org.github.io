@@ -12,10 +12,10 @@
                 </div>
                 <div class = "form-group">
                     <label for="description">Ingrese la descripcion</label>
-                    {!! Form::text('description',$team->description, ['class'=>'form-control'])!!}
+                    {!! Form::textarea('description',$team->description, ['class'=>'ckeditor form-control'])!!}
                 </div>
                 <div class = "form-group">
-                    <label for="urlphoto">Seleccione una imagen</label> <br>
+                    <label for="urlphoto">Imagen</label> <br>
                     <img src="/img/team/{{$team->urlphoto}}" >
                     {!! Form::file('urlphoto')!!}
                 </div>
@@ -34,3 +34,4 @@
 
 @endsection
 
+<script src="{{ asset('/vendors/ckeditor/ckeditor.js') }}"></script>

@@ -5,8 +5,9 @@
 
         <div class = "col-sm-10">
             <h5>Carrusel Principal</h5>
+            @can('pagina')
             <a href="{{route('carousel.create')}}" class="btn btn-success">Nuevo</a>
-
+            @endcan
             <table class="table table-striped">
                 <thead>
                     <th>Orden</th>

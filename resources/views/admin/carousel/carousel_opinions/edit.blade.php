@@ -9,7 +9,7 @@
 
                 <div class = "form-group">
                     <label for="description">Ingrese la descripcion</label>
-                    {!! Form::text('description',$carousel->description, ['class'=>'form-control'])!!}
+                    {!! Form::textarea('description',$carousel->description, ['class'=>'ckeditor form-control'])!!}
                 </div>
                 <div class = "form-group">
                     <label for="name">Ingrese un nombre</label>
@@ -30,3 +30,4 @@
 
 @endsection
 
+<script src="{{ asset('/vendors/ckeditor/ckeditor.js') }}"></script>

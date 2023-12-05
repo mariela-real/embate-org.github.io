@@ -16,7 +16,7 @@
                     @forelse ($carousels as $item)
                     <tr>
                         <td>{{$item->order}}</td>
-                        <td>{{$item->description}}</td>
+                        <td>{!!$item->description!!}</td>
                         <td>
                            <a href="{{route('opinions_carousel.edit', $item->id) }}" class="btn btn-success">Editar</a>
                            {!! Form::open(['method'=>'DELETE','route'=>['opinions_carousel.destroy',$item->id], 'style'=>'display:inline'])!!}

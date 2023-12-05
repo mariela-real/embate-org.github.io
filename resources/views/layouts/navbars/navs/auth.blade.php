@@ -13,15 +13,15 @@
     <div class="collapse navbar-collapse justify-content-end">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="{{ route('home') }}">
+          <a class="nav-link" href="{{ route('dashboard') }}">
             <i class="material-icons">dashboard</i>
             <p class="d-lg-none d-md-block">
               {{ __('Stats') }}
             </p>
           </a>
         </li>
-
-        <li class="nav-item dropdown">
+        @can('notifications')
+        <li class="nav-item {{ $activePage == 'notifications' ? ' active' : '' }}">
             <a class="nav-link" href="{{ route('notifications') }}" id="navbarDropdownMenuLink" role="button" aria-haspopup="true" aria-expanded="false" >
                 <i class="material-icons">notifications</i>
                 <!-- Counter - Alerts -->
@@ -30,8 +30,8 @@
                     {{ __('Some Actions') }}
                   </p>
             </a>
-
         </li>
+        @endcan
         <li class="nav-item dropdown">
           <a class="nav-link" href="#pablo" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="material-icons">person</i>
@@ -40,10 +40,10 @@
             </p>
           </a>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
-            <a class="dropdown-item" href="#">{{ __('Profile') }}</a>
-            <a class="dropdown-item" href="#">{{ __('Settings') }}</a>
+            <a class="dropdown-item" href="#">{{ __('Perfil') }}</a>
+            {{--<a class="dropdown-item" href="#">{{ __('Settings') }}</a>--}}
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">{{ __('Log out') }}</a>
+            <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">{{ __('Salir sesión') }}</a>
           </div>
         </li>
       </ul>
