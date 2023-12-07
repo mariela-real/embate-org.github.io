@@ -23,15 +23,15 @@ class SubscriberController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-  
+
     public function registerSubscripter(SubscriberRequest $request)
     {
         $subscriber = new Subscriber();
-        $subscriber->firstName = $request->firstName;
-        $subscriber->lastName = $request->lastName;
+        $subscriber->firstname = $request->firstname;
+        $subscriber->lastname = $request->lastname;
         $subscriber->email = $request->email;
         $subscriber->save();
-       
+
         return redirect()->route('home')->with('register', 'ok');
     }
 

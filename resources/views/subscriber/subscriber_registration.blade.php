@@ -39,10 +39,10 @@
                     @if ($errors->has('email'))
                     <span class="text-danger">{{ $errors->first('email') }}</span>
                     @endif
-                </div>                  
+                </div>
                 <div>
-                <button type="submit" class="button__start">UNIRME</a>  
-                </div> 
+                <button type="submit" class="button__start">UNIRME</a>
+                </div>
             </div>
        </form>
     </div>

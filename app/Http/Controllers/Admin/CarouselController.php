@@ -19,8 +19,8 @@ class CarouselController extends Controller
         $carousel = CarouselAboutUs::orderBy('order','asc')->get();
         return view('about.about', compact('carousel'));
     }
-    public function opinionsCarousel(){
+   /* public function opinionsCarousel(){
         $carousel = CarouselOpinion::orderBy('order','asc')->get();
         return view('motivation.motivation', compact('carousel'));
-    }
+    }*/
 }

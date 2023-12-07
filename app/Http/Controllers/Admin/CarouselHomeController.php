@@ -21,6 +21,12 @@ class CarouselHomeController extends Controller
 
     public function store(Request $request)
     {
+        /*$request->validate([
+            'order.*' => 'integer|unique:carousel,order', // Validación de números enteros únicos para el orden
+            'urlphoto.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'urlphoto' => 'required|array|min:3',
+            'link.*' => 'url',
+        ]);*/
         $carousel =  new CarouselHome($request->all());
         if($request->hasFile('urlphoto'))
         {
@@ -33,7 +39,7 @@ class CarouselHomeController extends Controller
             $carousel->urlphoto = $newName;
         }
         $carousel->save();
-        return redirect('/carousel');
+        return redirect('/carousel')->with('success','Item created successfully!');
     }
 
     public function update(Request $request, $id)

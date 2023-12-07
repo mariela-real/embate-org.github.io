@@ -15,36 +15,26 @@
 
 </head>
 <body>
-    <!-- content__motivation controla toda la pagina motivation, y clase text controla todo el texto de informacion-->
+    @isset($process)
+    @if(is_array($process) && count($process) > 0 && is_object($process[0]))
     <div class="content__motivation">
-
-
         <div class="text">
             <div class="line"></div>
             <h1>
-                MOTIVACION EMPRENDEDORA
+                {{$process[0]->title}}
             </h1>
             <p>
-                El proceso de motivación empresarial en la incubadora de empresas de
-                base tecnológica embate se enfoca en proporcionar campamentos de
-                motivación emprendedora, seminarios talleres y/o cursos de gestión
-                emprendedora a todo emprendedor ya sea interno o externo de la
-                Universidad mayor de San Simón.
-            </p>
-            <p>
-                Los campamentos de motivación empresarial son actividades que
-                pueden ser presenciales o virtuales con la participación de expositores,
-                esta actividad esta dirigida a estudiantes, docentes, emprendedores y
-                toda comunidad que quiera conocer gestiones emprendedoras.
+                {!!$process[0]->description!!}
             </p>
         </div>
-
         <!-- motivation__logo controla el logo de la pagina motivacion -->
         <div class="motivation__logo">
-            <img src="{{asset('img/motivacionEmprendedora2.jpg')}}" alt="">
+            <img src="img/process/{{$process[0]->urlphoto}}" alt="">
         </div>
-
     </div>
+    @endif
+    @endisset
+
 
     <!-- motivation_grid controla toda la parte del grid de la pagina de motivacion emprendedora -->
     <div class="motivation_grid">

@@ -12,6 +12,9 @@ use App\Http\Controllers\Admin\CarouselOpinionController;
 use App\Http\Controllers\Admin\TeamController;
 use App\Http\Controllers\Admin\WorkController;
 use App\Http\Controllers\Admin\OrganizationController;
+use App\Http\Controllers\Admin\ProcessController;
+use App\Http\Controllers\Admin\ProcessIncubationController;
+use App\Http\Controllers\Admin\ProcessMotivationController;
 use App\Http\Controllers\PermissionController;
 use Illuminate\Support\Facades\Route;
 
@@ -33,17 +36,6 @@ Route::get('/mission', function () {
     return view('mission_vision.mission_vision');
 });
 
-Route::get('/pre_incubation', function () {
-    return view('pre_incubation.pre_incubation');
-});
-
-Route::get('/incubation', function () {
-    return view('incubation.incubation');
-});
-
-Route::get('/post_incubation', function () {
-    return view('post_incubation.post_incubation');
-});
 
 Route::get('/service', function () {
     return view('contact.advice');
@@ -59,10 +51,14 @@ Route::get('/navbar', function(){
 Route::get('/', [CarouselController::class, 'mainCarousel'])->name('/');
 Route::get('/home', [CarouselController::class, 'mainCarousel'])->name('home');
 Route::get('/about', [CarouselController::class, 'aboutUsCarousel'])->name('about');
-Route::get('/motivation', [CarouselController::class, 'opinionsCarousel'])->name('motivacion');
+Route::get('/motivation', [ProcessMotivationController::class, 'showMotivation'])->name('motivacion');
 Route::get('/team', [TeamController::class, 'showTeam'])->name('team');
 Route::post('/home', [SubscriberController::class, 'registerSubscripter'])->name('home');
 Route::get('/work', [WorkController::class, 'showWork'])->name('work');
+//Route::get('/motivation_process', [ProcessMotivationController::class, 'showMotivation'])->name('motivation_process');
+Route::get('/pre_incubation', [ProcessController::class, 'showPreIncubation'])->name('pre_incubation');
+Route::get('/incubation', [ProcessController::class, 'showIncubation'])->name('incubation');
+Route::get('/post_incubation', [ProcessController::class, 'showPostIncubation'])->name('post_incubation');
 Route::post('/service', [ServiceRequestsController::class, 'sendScheduleAdvice'])->name('service');
 
  /* ------------------------------------RUTAS CON INICIO DE SESION---------------------------------------- */
@@ -92,4 +88,6 @@ Route::group(['middleware' => 'auth'], function() {
     Route::resource('/mission_vision', OrganizationController::class);
 /* ------------------------------------RUTAS "Procesos"------------------------------------------------- */
     Route::resource('/opinions_carousel', CarouselOpinionController::class);
+    Route::resource('/process_motivation', ProcessMotivationController::class);
+
 });
