@@ -16,7 +16,7 @@ class CreateProcessesTable extends Migration
         Schema::create('processes', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('description');
+            $table->text('description');
             $table->string('urlphoto');
             $table->timestamps();
         });

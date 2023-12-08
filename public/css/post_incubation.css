@@ -10,8 +10,8 @@
 }
 
 .line{
-    width: 51px; 
-    height: 5px; 
+    width: 51px;
+    height: 5px;
     background-image: linear-gradient(to right, rgb(255, 255, 255), rgb(255, 255, 255), rgb(255, 255, 255));
 }
 
@@ -45,7 +45,7 @@
         width: 100%;
         padding-left: 0px;
     }
-    
+
     .content__postIncubation .postIncubation__logo img{
 
         padding-left: 0px;
@@ -82,8 +82,8 @@
 /*TEXTO DINAMICO */
 
 .text_dinamic{
-   
-    background-color: rgb(255, 255, 255); 
+
+    background-color: rgb(255, 255, 255);
     color: white;
     display: flex;
     align-self: start;
@@ -105,9 +105,9 @@
 
 .items{
     background-color: white;
-    color: rgb(56, 181, 190); 
+    color: rgb(56, 181, 190);
     padding: 0px;
-    
+
 }
 
 .item{
@@ -117,7 +117,7 @@
     border-radius: 0px 100px 0px 100px;
     justify-content: space-between;
     align-items: center;
-    
+
 }
 .item i{
     padding-right: 100px;
@@ -126,13 +126,13 @@
 }
 
 .item h3{
-    
+
     font-size: 22px;
-    
+
 }
 
 .active {
-    background-color: rgb(56, 181, 190); 
+    background-color: rgb(56, 181, 190);
     color: white;
   }
 
@@ -150,9 +150,9 @@
     .items{
         width: 5%;
     }
-    
+
     .item, .texto{
-    
+
        margin: 10px 0;
     }
 
@@ -162,9 +162,9 @@
     }
 
     .item h3{
-    
+
         font-size: 3vw;
-        
+
     }
 
     .item i{
@@ -175,7 +175,7 @@
         font-size: 3vw;
     }
 
-   
+
 }
 
 @media (max-width: 600px) {
@@ -204,10 +204,10 @@
     }
 
     #replacementContent .item i{
-      
+
         padding: 0px 0px 0px 10px;
         margin-top: 5px;
     }
-   
+
 }
 

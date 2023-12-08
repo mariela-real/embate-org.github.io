@@ -150,6 +150,13 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        'title'=>'título',
+        'username'=>'usuario',
+        'firstname'=>'nombre',
+        'lastname'=>'apellido',
+        'urlphoto'=>'imagen',
+        'description'=>'descripción'
+    ],
 
 ];

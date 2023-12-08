@@ -7,10 +7,11 @@ use Illuminate\Http\Request;
 use Image;
 use App\Models\Process;
 use App\Models\CarouselOpinion;
+use App\Http\Requests\ProcessRequest;
 class ProcessMotivationController extends Controller
 {
     public function showMotivation(){
-        $process = Process::find(1);
+        $process = Process::first();
         $carousel = CarouselOpinion::orderBy('order','asc')->get();
         return view('motivation.motivation', compact('process', 'carousel'));
     }
@@ -24,7 +25,7 @@ class ProcessMotivationController extends Controller
         return view('admin.process.motivation.create');
     }
 
-    public function store(Request $request)
+    public function store(ProcessRequest $request)
     {
         $process = new Process($request->all());
         if($request->hasFile('urlphoto'))
@@ -41,7 +42,7 @@ class ProcessMotivationController extends Controller
         return redirect('/process_motivation');
     }
 
-    public function update(Request $request, $id)
+    public function update(ProcessRequest $request, $id)
     {
         $process = Process::findOrfail($id);
         $process->fill($request->all());
@@ -53,7 +54,7 @@ class ProcessMotivationController extends Controller
         $image = $request->file('urlphoto');
         $newName ='process_'.time().'.'.$image->guessExtension();
         Image::make($image->getRealPath())
-        ->fit(1200, 450, function($constraint){ $constraint->upsize(); })
+        ->fit(1200, 800, function($constraint){ $constraint->upsize(); })
         ->save(public_path('/img/process/'.$newName));
 
         $process->urlphoto = $newName;

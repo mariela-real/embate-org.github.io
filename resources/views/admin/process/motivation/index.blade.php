@@ -5,7 +5,7 @@
     <div class= "row">
 
         <div class = "col-sm-10">
-            <a href="{{route('process_motivation.create')}}" class="btn btn-success">Nuevo</a>
+            {{--<a href="{{route('process_motivation.create')}}" class="btn btn-success">Nuevo</a>--}}
             <table class="table table-striped">
                 <thead>
                     <th>Titulo</th>
