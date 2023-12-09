@@ -3,7 +3,7 @@
 .content__about{
     display: flex;
     flex-direction: row;
-    margin-top: 100px;
+    margin-top: 60px;
     background-color: rgb(255, 255, 255);
     color: #000000;
 }
@@ -20,8 +20,8 @@
 }
 
 .line{
-    width: 90px; 
-    height: 5px; 
+    width: 90px;
+    height: 5px;
     background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(0, 0, 0), rgb(0, 0, 0));
 }
 
@@ -34,24 +34,24 @@
 
     .content__about .text{
         padding: 100px 200px 50px 200px;
-       
+
     }
 
-   
-    
+
+
 }
 
 @media (max-width: 882px){
 
-  
+
 
     .content__about .text{
         padding: 100px 100px 50px 100px;
-       
+
     }
 
-   
-    
+
+
 }
 
 
@@ -66,16 +66,16 @@
     position: relative;
     z-index: 0;
     display: flex;
-    
+
   }
 img{
     height: 510px;
     width: 100%;
     object-fit: cover;
-   
+
 }
 
-.swiper-button-prev{  
+.swiper-button-prev{
     --swiper-navigation-size: 20px;
     color: white;
     background-color: black;
@@ -89,7 +89,7 @@ img{
 .swiper-button-prev:hover{
     opacity: 1;
 
-}  
+}
 .swiper-button-next{
     --swiper-navigation-size: 20px;
     color: white;
@@ -104,12 +104,12 @@ img{
 .swiper-button-next:hover{
     opacity: 1;
 
-}  
+}
 
 .swiper-pagination{
     margin-bottom: 30px;
     background: transparent;
-    
+
 }
 
 .swiper-scrollbar{
@@ -123,7 +123,7 @@ img{
         width: 100%;
         object-fit: cover;
     }
-    
+
 }
 
 .swiper-pagination{
@@ -133,7 +133,7 @@ img{
     --swiper-pagination-bullet-inactive-opacity: 0.22;
     --swiper-pagination-bullet-opacity: 1;
     --swiper-pagination-bullet-horizontal-gap: 2px;
-    
+
 }
 
 .swiper-pagination-bullet{
@@ -146,12 +146,12 @@ img{
 
 /*texto transparente*/
 
-  
+
   .text-overlay {
     position: absolute;
     top: 0;
     bottom: 0;
-    
+
     color: #fff;
     background: rgba(0, 0, 0, 0.5);
     opacity: 0;
@@ -168,41 +168,41 @@ img{
     font-weight: bold;
   }
 
-  
+
   .text-overlay h2{
     padding-top: 10px;
     font-weight: bold;
   }
-  
+
   .left {
     left: 0;
   }
-  
+
   .right {
     right: 0;
   }
-  
+
   .swiper-button-prev,
   .swiper-button-next,
   .swiper-pagination-bullet {
     z-index: 1;
   }
-  
+
   .swiper-pagination-bullet {
     cursor: pointer;
   }
-  
+
 
 @media  screen and (max-width: 760px) {
-    
-    
+
+
     .content__about .text{
         padding: 50px 20px 50px 20px;
       margin-top: 50px;
     }
 
     .text-overlay {
-        
+
         width: 100%;
       }
 }

@@ -8,14 +8,23 @@
                 <div class="form-group">
                     <label for="name">Ingrese un nombre</label>
                     {!! Form::text('name', null, ['class'=>'form-control','maxlength'=>'67']) !!}
+                    @if ($errors->has('name'))
+                    <span class="text-danger">{{ $errors->first('name') }}</span>
+                    @endif
                 </div>
                 <div class="form-group">
                     <label for="description">Ingrese la descripción</label>
                     {!! Form::textarea('description', null, ['class'=>'ckeditor form-control']) !!}
+                    @if ($errors->has('description'))
+                    <span class="text-danger">{{ $errors->first('description') }}</span>
+                    @endif
                 </div>
                 <div class="form-group">
                     <label for="urlphoto">Imagen</label> <br>
                     {!! Form::file('urlphoto') !!}
+                    @if ($errors->has('urlphoto'))
+                    <span class="text-danger">{{ $errors->first('urlphoto') }}</span>
+                    @endif
                 </div>
                 <div class="form-group">
                     <label>Perfiles públicos</label>

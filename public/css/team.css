@@ -1,8 +1,5 @@
 .content__team {
     background-color: black;
-
-
-
     height: 100%;
     display: flex;
     justify-content: space-between;
@@ -16,16 +13,17 @@
 }
 
 .content__team .team__logo{
-    margin-top: 150px;
+    margin-top: 110px;
 }
 .content__team .team__logo img{
 
-    width: 60%;
-    height: 60%;
-    margin-top: 20px;
+    width: 65%;
+    height: 65%;
+    margin-top: 15px;
     margin-bottom: 20px;
-    margin-left: 200px;
-    border-radius:20px;
+    margin-left: 320px;
+    border-radius: 0 0 80px 0;
+
 
 }
 
@@ -118,7 +116,7 @@
 }
 .grid__item {
     width: 290px;
-    height: 500px;
+    height: 580px;
 
     margin: 5px;
     padding: 20px;
@@ -141,7 +139,7 @@
 
 .team_grid .grid-container img{
     width: 100%;
-    height: 200px;
+    height: 250px;
     object-fit: cover;
 
 }
@@ -178,7 +176,7 @@
 
     .team_grid .grid-container img{
 
-        height: 200px;
+        height: 250px;
     }
 }
 
@@ -189,12 +187,67 @@
 
     .team_grid .grid-container img{
 
-        height: 150px;
+        height: 250px;
     }
 }
 @media (max-width: 600px) {
     .grid__item {
       width: 100%;
       height: auto;
+    }
+}
+.content__teams{
+    display: flex;
+    flex-direction: row;
+    margin-top: 60px;
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+
+}
+
+.content__teams .text{
+    padding: 50px 500px 50px 68px;
+    text-align: justify;
+    position: relative;
+    font-weight: bold;
+
+
+}
+
+.content__teans .text p{
+    padding-top: 5px;
+
+}
+
+.line{
+    width: 90px;
+    height: 5px;
+    background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(0, 0, 0), rgb(0, 0, 0));
+}
+
+.image-wrapper {
+    flex-shrink: 0;
+}
+
+.team-image {
+    margin-top: 10px;
+    width: 100%;
+    max-width: 500px;
+    margin-left: -200px;
+}
+
+@media screen and (max-width: 1024px) {
+    .content__teams .text {
+        padding: 30px 100px 30px 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .content__teams {
+        flex-direction: column;
+    }
+
+    .content__teams .text {
+        padding: 30px 20px;
     }
 }

@@ -156,7 +156,8 @@ return [
         'firstname'=>'nombre',
         'lastname'=>'apellido',
         'urlphoto'=>'imagen',
-        'description'=>'descripción'
+        'description'=>'descripción',
+        'order'=>'orden'
     ],
 
 ];

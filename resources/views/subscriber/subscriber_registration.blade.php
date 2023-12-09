@@ -11,8 +11,11 @@
 <footer>
     <div class="content__footer">
         <div class="content__info">
-            <h1>Únete a nuestra comunidad</h1>
-            <p>Obtenga las ultimas noticias, recursos para nuevas empresas, descuentos y mas</p>
+            <h1>Únete a nuestro equipo</h1>
+            <p>Obtenga las ultimas noticias, eventos, talleres y mas.</p>
+            <p>
+                ¡<strong>EMBATE</strong> es una buena idea!
+            </p>
         </div>
       <form action="home" method="POST">
         @csrf

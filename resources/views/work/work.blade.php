@@ -10,6 +10,7 @@
 
     <title></title>
     <link rel="stylesheet" href="{{asset('css/work.css')}}">
+    <link rel="stylesheet" href="{{asset('css/team.css')}}">
 </head>
 <body>
 
@@ -28,9 +29,12 @@
            <div class="work_body">
                 <div class="body_description">
                     <p>
-                    {{$item2->description}}
+                    {!!$item2->description!!}
                     </p>
-                    <button type="submit" class="button__link">Contáctenos</button>
+
+                    <button type="submit" class="button__start">
+                        <a href="/service" class="button__start">Contáctenos</a>
+                    </button>
                 </div>
                 <!-- body_image controla la parte la segunda parte de la fila de contenido en la cual esta la imagen de logo-->
 

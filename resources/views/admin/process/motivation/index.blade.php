@@ -14,22 +14,24 @@
                     <th>Accion</th>
                 </thead>
                 <tbody>
-                    @forelse ($process as $item)
+                    @if ($process)
                     <tr>
-                        <td>{{$item->title}}</td>
-                        <td>{!!$item->description!!}</td>
-                        <td><img src="/img/process/{{$item->urlphoto}}" width="200"></td>
+                        <td>{{$process->title}}</td>
+                        <td>{!!$process->description!!}</td>
+                        <td><img src="/img/process/{{$process->urlphoto}}" width="200"></td>
                         <td>
-                           <a href="{{route('process_motivation.edit', $item->id) }}" class="btn btn-success">Editar</a>
-                           {!! Form::open(['method'=>'DELETE','route'=>['process_motivation.destroy',$item->id], 'style'=>'display:inline'])!!}
+                           <a href="{{route('process_motivation.edit', $process->id) }}" class="btn btn-success">Editar</a>
+                           {!! Form::open(['method'=>'DELETE','route'=>['process_motivation.destroy',$process->id], 'style'=>'display:inline'])!!}
                            {!! Form::submit('Eliminar', ['class'=>'btn btn-success']) !!}
                            {!! Form::close() !!}
                        </td>
                     </tr>
 
-                    @empty
-
-                    @endforelse
+                    @else
+                    <tr>
+                        <td colspan="4">No hay datos disponibles</td>
+                    </tr>
+                    @endif
                 </tbody>
 
             </table>

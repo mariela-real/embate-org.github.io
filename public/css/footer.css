@@ -4,12 +4,12 @@
     box-sizing: border-box;
     font-family: 'Source Sans 3', sans-serif;
     text-decoration: none;
-   
+
 }
 .button__container {
     display: flex;
-    justify-content: flex-end; 
-    margin-top: 10px; 
+    justify-content: flex-end;
+    margin-top: 10px;
 }
 
 .content__footer{
@@ -49,14 +49,14 @@
 }
 
 .input__item:hover{
-    border-bottom: 2px solid rgb(56, 181, 190); 
+    border-bottom: 2px solid rgb(56, 181, 190);
 }
 
 .input__item label{
     position: absolute;
     top: 50%;
     left: 5px;
-    font-size: 20px; 
+    font-size: 20px;
     transform: translateY(-50%);
     font-size: 1em;
     color: white;
@@ -77,7 +77,7 @@
 
     background-color: black;
 
-    font-size: 25px; 
+    font-size: 15px;
 
     border: none;
     outline: none;
@@ -86,18 +86,18 @@
 span{
     width: 100%;
     height: 100%;
-    font-size: 16px; 
+    font-size: 16px;
     border: none;
     outline: none;
-    color: rgb(255, 19, 19); 
+    color: rgb(255, 19, 19);
 }
 .button__start{
-    
+
     width: 200px;
     height: 50px;
     margin-left: 60px;
     margin-top: 25px;
-    background: rgb(56, 181, 190); 
+    background: rgb(56, 181, 190);
     border: none;
     outline: none;
     border-radius: 6px;
@@ -109,9 +109,9 @@ span{
 }
 
 .button__start:hover{
-    background: rgb(255, 255, 255); 
-    color: rgb(56, 181, 190); 
-    
+    background: rgb(255, 255, 255);
+    color: rgb(56, 181, 190);
+
 }
 
 @media  screen and (max-width: 871px) {
@@ -129,7 +129,7 @@ span{
        flex-direction: column;
     }
 
-    .button__start{   
+    .button__start{
         width: 200px;
         height: 50px;
         margin-left: 0px;

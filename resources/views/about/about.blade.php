@@ -47,7 +47,7 @@
                     {{$item->title}}
                 </h2>
                 <p>
-                   {{$item->description}}
+                    {!!$item->description!!}
                 </p>
             </div>
           </div>
@@ -65,6 +65,25 @@
         <!-- scrollbar del slide
         <div class="swiper-scrollbar"></div> -->
       </div>
+    </div>
+    <div class="content__about">
+        <div class="text">
+            <h2>
+                NUESTRA HISTORIA
+            </h2>
+            <div class="line"></div>
+
+            <p>
+                EMBATE, se crea el año 2009 a partir de la colaboración del viceministerio de Ciencias y Tecnología y el Instituto Politécnico Nacional de México, por Eduardo Zambrana y Ing. Julio Medina, quienes vieron la necesidad de generar un proyecto que apoye a emprendimientos.
+            </p>
+
+            <p>
+                Comienza a funcionar desde 2009 y 2013, se realizan actividades destinadas a la interacción académicos. Opera oficialmente desde el 2021 a cargo del M. Sc. Rodrigo Carlos Echeverria Herrera
+                A partir del 2021, EMBATE se dedica al desarrollo de ideas de emprendedores, con la finalidad de que estos se consoliden como empresas solidas a base de nuevas tecnologías, se ve la necesidad de fortalecer la estructura operativa con dos incubadoras de gestión.
+            </p>
+
+            <!-- Agrega más párrafos o elementos según sea necesario -->
+        </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <script type="text/javascript" src="{{asset('js/about.js')}}"></script>

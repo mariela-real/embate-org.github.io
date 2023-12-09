@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Image;
-
+use App\Http\Requests\CarouselAboutUsRequest;
 use App\Models\CarouselAboutUs;
 class CarouselAboutUsController extends Controller
 {
@@ -20,7 +20,7 @@ class CarouselAboutUsController extends Controller
         return view('admin.about_us.carousel_aboutUs.create');
     }
 
-    public function store(Request $request)
+    public function store(CarouselAboutUsRequest $request)
     {
         $carousel = new carouselAboutUs($request->all());
         if($request->hasFile('urlphoto'))
@@ -37,7 +37,7 @@ class CarouselAboutUsController extends Controller
         return redirect('/aboutUs_carousel');
     }
 
-    public function update(Request $request, $id)
+    public function update(CarouselAboutUsRequest $request, $id)
     {
         $carousel = CarouselAboutUs::findOrfail($id);
         $carousel->fill($request->all());

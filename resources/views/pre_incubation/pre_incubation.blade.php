@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
+
     <title></title>
     <link rel="stylesheet" href="{{asset('css/pre_incubation.css')}}">
 </head>
@@ -28,9 +28,9 @@
             </p>
         </div>
         <!-- preIncubation__logo controla la parte del logo de la pagina-->
-        <div class="preIncubation__logo"> 
+        <div class="preIncubation__logo">
                 <img src="{{asset('img/preIncubacion.jpg')}}" alt="">
-                
+
         </div>
     </div>
 
@@ -104,7 +104,7 @@
             </div>
             <div class="item  ">
                 <h3>Convocatoria a pre incubación <i class="fa-solid fa-angle-right"></i> </h3>
-                
+
                 <div class="textos">
                     <div class="texto">La incubadora de empresas de base
                         tecnológica EMBATE lanza las convocatorias públicas.</div>
@@ -112,7 +112,7 @@
             </div>
             <div class="item">
                 <h3>Proceso de pre selección <i class="fa-solid fa-angle-right"></i> </h3>
-                
+
                 <div class="textos">
                     <div class="texto">El proceso de pre selección de los proyectos
                         busca realizar la primera depuración de los proyectos, este proceso no
@@ -121,7 +121,7 @@
             </div>
             <div class="item">
                 <h3>Tutorías iniciales <i class="fa-solid fa-angle-right"></i></h3>
-                
+
                 <div class="textos">
                     <div class="texto">Las tutorías iniciales son los primeros apoyos que se
                         brinda de manera directa de la incubadora a los emprendedores
@@ -131,7 +131,7 @@
             </div>
             <div class="item">
                 <h3>Primera evaluación <i class="fa-solid fa-angle-right"></i></h3>
-                
+
                 <div class="textos">
                     <div class="texto">La primera evaluación se la realiza de manera mas
                         especifica con la participación de tribunales y unidades académicas de
@@ -146,7 +146,7 @@
                         Se programará una reunión técnica especifica con las unidades
                         interesadas en apoyar el proceso de incubación.</div>
                 </div>
-            </div>      
+            </div>
         </div>
     </div>
     <script type="text/javascript" src="{{asset('js/pre_incubation.js')}}"></script>

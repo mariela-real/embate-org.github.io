@@ -35,6 +35,23 @@
         </div>
 
     </div>
+    <div class="content__teams">
+        <div class="text">
+            <h2>
+                NUESTRO EQUIPO
+            </h2>
+            <div class="line"></div>
+            <br>
+            <p>
+                En EMBATE, contamos con un equipo diverso y comprometido que comparte la visión de fomentar el crecimiento empresarial de manera integral. Desde rigurosos procesos de selección y evaluación hasta un seguimiento meticuloso del progreso, cada miembro del equipo, incluyendo a nuestros voluntarios, desempeña un papel crucial para asegurar que los emprendedores seleccionados reciban el respaldo necesario.
+            </p>
+
+        </div>
+        <div class="image-wrapper">
+            <!-- Ajusta la ruta de la imagen según sea necesario -->
+            <img src="{{asset('img/logo.jpg')}}" alt="" class="team-image">
+        </div>
+    </div>
     <!-- team_grid controla toda la parte del grid de empleados -->
     <div class="team_grid">
         <div class="grid-container">

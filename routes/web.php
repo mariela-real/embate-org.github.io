@@ -16,6 +16,7 @@ use App\Http\Controllers\Admin\ProcessController;
 use App\Http\Controllers\Admin\ProcessIncubationController;
 use App\Http\Controllers\Admin\ProcessMotivationController;
 use App\Http\Controllers\PermissionController;
+use App\Http\Controllers\Admin\ProcessPreIncubationController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -77,7 +78,7 @@ Route::group(['middleware' => 'auth'], function() {
 
     Route::get('/notifications', [ServiceRequestsController::class, 'messageReport'])->name('notifications');
     Route::get('/message/{id}', [ServiceRequestsController::class, 'show'])->name('message');
-    Route::resource('/setting', SettingController::class);
+
 /* --------------------------------------RUTAS "Inicio"----------------------------------------------- */
     Route::resource('/carousel', CarouselHomeController::class);
 /* ------------------------------------RUTAS "A cerca de nosotros"------------------------------------- */
@@ -87,7 +88,9 @@ Route::group(['middleware' => 'auth'], function() {
     Route::resource('/how_to_work', WorkController::class);
     Route::resource('/mission_vision', OrganizationController::class);
 /* ------------------------------------RUTAS "Procesos"------------------------------------------------- */
+Route::get('/process', function(){return view('admin.process.index'); });
     Route::resource('/opinions_carousel', CarouselOpinionController::class);
     Route::resource('/process_motivation', ProcessMotivationController::class);
+    Route::resource('/process_pre_incubation', ProcessPreIncubationController::class);
 
 });

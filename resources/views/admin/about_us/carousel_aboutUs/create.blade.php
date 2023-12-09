@@ -1,4 +1,4 @@
-@extends('layouts.main', ['activePage' => 'aboutUs_carousel', 'titlePage' => __('Carruserl "a cerca de nosotros"')])
+@extends('layouts.main', ['activePage' => 'aboutUs_carousel', 'titlePage' => __('Carrusel "A cerca de nosotros"')])
 @section('content')
 <div class="container-fluid">
     <div class= "row">
@@ -10,18 +10,30 @@
                 <div class = "form-group">
                     <label for="title">Ingrese un titulo</label>
                     {!! Form::text('title',null, ['class'=>'form-control','maxlength'=>'67'])!!}
+                    @if ($errors->has('title'))
+                    <span class="text-danger">{{ $errors->first('title') }}</span>
+                    @endif
                 </div>
                 <div class = "form-group">
                     <label for="description">Ingrese la descripcion</label>
                     {!! Form::textarea('description',null, ['class'=>'ckeditor form-control'])!!}
+                    @if ($errors->has('description'))
+                    <span class="text-danger">{{ $errors->first('description') }}</span>
+                    @endif
                 </div>
                 <div class = "form-group">
                     <label for="order">Ingrese un orden</label>
                     {!! Form::text('order',null, ['class'=>'form-control','maxlength'=>'67'])!!}
+                    @if ($errors->has('order'))
+                    <span class="text-danger">{{ $errors->first('order') }}</span>
+                    @endif
                 </div>
                 <div class="form-group">
-                    <label for="urlphoto">Seleccione una imagen</label> <br>
+                    <label for="urlphoto">Imagen</label> <br>
                     <input type="file" name="urlphoto">
+                    @if ($errors->has('urlphoto'))
+                    <span class="text-danger">{{ $errors->first('urlphoto') }}</span>
+                    @endif
                 </div>
             </div>
             {!! Form::submit('Guardar',['class'=>'btn btn-success']) !!}

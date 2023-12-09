@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Image;
 use App\Models\CarouselHome;
+use App\Http\Requests\CarouselHomeRequest;
 class CarouselHomeController extends Controller
 {
     public function index()
@@ -19,7 +20,7 @@ class CarouselHomeController extends Controller
         return view('admin.carousel.carousel_home.create');
     }
 
-    public function store(Request $request)
+    public function store(CarouselHomeRequest $request)
     {
         /*$request->validate([
             'order.*' => 'integer|unique:carousel,order', // Validación de números enteros únicos para el orden
@@ -42,7 +43,7 @@ class CarouselHomeController extends Controller
         return redirect('/carousel')->with('success','Item created successfully!');
     }
 
-    public function update(Request $request, $id)
+    public function update(CarouselHomeRequest $request, $id)
     {
         $carousel = CarouselHome::findOrfail($id);
         $carousel->fill($request->all());

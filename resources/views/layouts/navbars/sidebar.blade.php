@@ -66,8 +66,8 @@
                 <span class="sidebar-normal"> {{ __('Nosotros') }} </span>
               </a>
             </li>
-            <li class="nav-item{{ $activePage == 'opinions_carousel' ? ' active' : '' }}">
-                <a class="nav-link" href="/opinions_carousel">
+            <li class="nav-item{{ $activePage == 'process' ? ' active' : '' }}">
+                <a class="nav-link" href="/process">
                   <span class="sidebar-mini"> P </span>
                   <span class="sidebar-normal"> {{ __('Procesos') }} </span>
                 </a>

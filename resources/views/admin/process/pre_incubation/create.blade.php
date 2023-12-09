@@ -1,10 +1,10 @@
-@extends('layouts.main', ['activePage' => 'process', 'titlePage' => __('Procesos')])
+@extends('layouts.main', ['activePage' => 'process_pre_incubation', 'titlePage' => __('Procesos')])
 @section('content')
 <div class="container-fluid">
     <div class= "row">
 
         <div class = "col-sm-10">
-            {!! Form::open(['route'=>['process.store'],'method'=>'POST','files'=>true])!!}
+            {!! Form::open(['route'=>['process_pre_incubation.store'],'method'=>'POST','files'=>true])!!}
 
             <div class = "jumbotron">
                 <div class = "form-group">

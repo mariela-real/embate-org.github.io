@@ -3,10 +3,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EMBATE</title> 
+    <title>EMBATE</title>
     <script src="https://kit.fontawesome.com/13fe1b16d3.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{{asset('css/footer_footer.css')}}" />
-    
+
 </head>
 
 <footer>
@@ -25,7 +25,7 @@
                 Oficina principal
                 </h4>
                 <p>
-                Calle Jordan &, Av Oquendo, Cochabamba, Bolivia
+                Calle Jordan & Av. Oquendo, Cochabamba, Bolivia.
                 </p>
             </div>
           <!-- contact_icons logo ce encarga de los iconos y cada icono tiene asignada la clase icon__menu para q todos tengan las mismas propiedades-->
@@ -33,13 +33,10 @@
                 <a href="https://www.facebook.com/profile.php?id=100064455141674">
                 <i class="fa-brands fa-facebook icon__menu"></i>
                 </a>
-                <a href="">
-                <i class="fa-brands fa-instagram icon__menu"></i>
-                </a>
-                <a href="">
+                <a href="https://www.tiktok.com/@embate.incubadora">
                 <i class="fa-brands fa-tiktok icon__menu"></i>
                 </a>
-                
+
             </div>
         </div>
         <!-- footer_contact_2  controla el texto 2-->

@@ -17,7 +17,7 @@ class ProcessMotivationController extends Controller
     }
     public function index()
     {
-        $process = Process::all();
+        $process = Process::where('id', 1)->first();
         return view('admin.process.motivation.index', compact('process'));
     }
     public function create()

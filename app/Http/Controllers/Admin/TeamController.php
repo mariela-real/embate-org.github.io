@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Image;
 use App\Models\Team;
+use App\Http\Requests\TeamRequest;
 class TeamController extends Controller
 {
     public function showTeam(){
@@ -22,7 +23,7 @@ class TeamController extends Controller
         return view('admin.about_us.team.create');
     }
 
-    public function store(Request $request)
+    public function store(TeamRequest $request)
     {
         $team = new team($request->all());
         if($request->hasFile('urlphoto'))
@@ -39,7 +40,7 @@ class TeamController extends Controller
         return redirect('/team_profile');
     }
 
-    public function update(Request $request, $id)
+    public function update(TeamRequest $request, $id)
     {
         $team = Team::findOrfail($id);
         $team->fill($request->all());
@@ -51,7 +52,7 @@ class TeamController extends Controller
         $image = $request->file('urlphoto');
         $newName ='team_'.time().'.'.$image->guessExtension();
         Image::make($image->getRealPath())
-        ->fit(1200, 450, function($constraint){ $constraint->upsize(); })
+        ->fit(1080, 1080, function($constraint){ $constraint->upsize(); })
         ->save(public_path('/img/team/'.$newName));
 
         $team->urlphoto = $newName;

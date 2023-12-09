@@ -5,6 +5,7 @@
 
         <div class = "col-sm-10">
             {!! Form::open(['route'=>['opinions_carousel.update', $carousel], 'method'=>'PUT','files'=>true])!!}
+            @csrf
             <div class = "jumbotron">
 
                 <div class = "form-group">
