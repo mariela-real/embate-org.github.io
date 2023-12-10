@@ -94,3 +94,15 @@ img{
 .swiper-pagination-bullet-active{
     box-shadow: 0 0 0 1px rgb(0, 0, 0, 0.25);
 }
+
+.see__more{
+    position: absolute;
+    color: white;
+    background-color: black;
+    width: 100%;
+    margin-top: -100px;
+ 
+    text-align: center;
+    
+    z-index: 1;
+}

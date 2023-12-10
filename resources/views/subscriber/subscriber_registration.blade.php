@@ -43,11 +43,13 @@
                     <span class="text-danger">{{ $errors->first('email') }}</span>
                     @endif
                 </div>
-                <div>
-                <button type="submit" class="button__start">UNIRME</a>
-                </div>
+                
             </div>
+            
        </form>
+       <div class="button_join">
+        <button type="submit" class="button__start">UNIRME</a>
+        </div>
     </div>
     <script src="{{asset('js/app.js')}}"></script>
     @if (session('register')=='ok')
