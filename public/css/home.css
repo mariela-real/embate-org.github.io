@@ -100,9 +100,30 @@ img{
     color: white;
     background-color: black;
     width: 100%;
-    margin-top: -100px;
+    margin-top: -110px;
  
     text-align: center;
     
     z-index: 1;
+}
+
+.button__seeMore{
+
+
+    padding: 5px 15px 5px 15px;
+    background: rgb(56, 181, 190);
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    transition: 0.5s ease;
+}
+
+.button__seeMore:hover{
+    background: rgb(255, 255, 255);
+    color: rgb(56, 181, 190);
+
 }
