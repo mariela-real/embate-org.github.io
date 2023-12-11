@@ -50,37 +50,67 @@
                    <div class="columna">
                         <div class="body_item">
                             <h3 class="titulo" onclick="toggleTexto(this)">Selección rigurosa</h3>
-                            <div class="contenido">Nuestro primer paso es la selección y evaluación meticulosa.
-                            Cada proyecto y emprendedor que se acerca a nosotros es
-                            sometido a un análisis profundo. Nuestros evaluadores y
-                            mentores de renombre examinan cada propuesta en busca
-                            de su viabilidad y potencial. Si eres seleccionado, comienza
-                            una emocionante colaboración con EMBATE.</div>
+                            <div class="contenido">
+                                <h5>Nuestro primer paso es la selección y evaluación meticulosa.
+                                    Cada proyecto y emprendedor que se acerca a nosotros es
+                                    sometido a un análisis profundo. Nuestros evaluadores y
+                                    mentores de renombre examinan cada propuesta en busca
+                                    de su viabilidad y potencial. Si eres seleccionado, comienza
+                                    una emocionante colaboración con EMBATE.
+                                </h5>
+                            </div>
                         </div>
                         <div class="body_item">
                             <h3 class="titulo" onclick="toggleTexto(this)">Capacitación personalizada</h3>
-                            <div class="contenido">Una vez dentro de EMBATE, te ofrecemos mucho más que un
-                                simple espacio de trabajo.
-                                Aquí encontrarás capacitación y asesoramiento
-                                personalizado en áreas críticas para tu negocio, desde finanzas
-                                y marketing hasta operaciones y estrategia. No solo te damos
-                                las herramientas, sino que te enseñamos a usarlas.</div>
+                            <div class="contenido">
+                                <h5>
+                                    Una vez dentro de EMBATE, te ofrecemos mucho más que un
+                                    simple espacio de trabajo.
+                                    Aquí encontrarás capacitación y asesoramiento
+                                    personalizado en áreas críticas para tu negocio, desde finanzas
+                                    y marketing hasta operaciones y estrategia. No solo te damos
+                                    las herramientas, sino que te enseñamos a usarlas.
+                                </h5>
+                            </div>
                         </div>
                         <div class="body_item">
                             <h3 class="titulo" onclick="toggleTexto(this)">Seguimiento continuo</h3>
 
-                            <div class="contenido">Reconocemos que el camino emprendedor está lleno de desafíos.
-                                Por lo tanto, en EMBATE, te ofrecemos un seguimiento constante. Realizamos reuniones periódicas con
-                                nuestros mentores para evaluar el progreso de tu proyecto y realizar ajustes si es necesario.
-                                Además, mantenemos un registro detallado de la gestión y finanzas de cada proyecto para garantizar la
-                                transparencia y responsabilidad.</div>
+                            <div class="contenido">
+                                <h5>
+                                    Reconocemos que el camino emprendedor está lleno de desafíos.
+                                    Por lo tanto, en EMBATE, te ofrecemos un seguimiento constante. Realizamos reuniones periódicas con
+                                    nuestros mentores para evaluar el progreso de tu proyecto y realizar ajustes si es necesario.
+                                    Además, mantenemos un registro detallado de la gestión y finanzas de cada proyecto para garantizar la
+                                    transparencia y responsabilidad.
+                                </h5>
+                            </div>
 
                         </div>
                   </div>
               </div>
+
          </div>
          @empty
          @endforelse
+
+         <div class="content__work2">
+            <div class="work_title">
+                <h1>
+                APOYO
+                </h1>
+                <div class="line"></div>
+            </div>
+            <div class="work_body">
+                <div class="body_description">
+                    <p>
+                        EMBATE  es una Unidad que abre las puertas a ideas de negocio y emprendimientos que inician en esta etapa de emprender, socializar, y a dar a conocer sus productos en el mercado.
+Con el apoyo de las Unidades de investigacion se otorgan estas herramientas útiles a los nuevos emprendedores.
+                    </p>
+                </div>
+            </div>
+        </div>
+
 
     </div>
 
