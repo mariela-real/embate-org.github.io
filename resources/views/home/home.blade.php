@@ -10,16 +10,15 @@
 <body>
     <div class="content">
         <!-- Slider tipo swiper -->
-        <div class="swiper">
-            <!-- clase q controla todo el slide -->
-            <div class="swiper-wrapper">
-            <!-- Slides -->
+        <div class="swiper-wrapper">
             @forelse ($carousel as $item)
                 <div class="swiper-slide">
-                    <img src="img/carousel/{{$item->urlphoto}}" class="d-block w-100">
-                    <div class="text-overlay left">
-                        <h5>{{$item->description}}</h5>
-                        <a href="{{$item->link}}" class="btn btn-danger"> Ver mas</a>
+                    <div class="slide-content">
+                        <img src="img/carousel/{{$item->urlphoto}}" class="d-block w-100">
+                        <div class="text-overlay left">
+                            <h5>{{$item->description}}</h5>
+                            <a href="{{$item->link}}" class="btn btn-danger">Ver más</a>
+                        </div>
                     </div>
                 </div>
             @empty

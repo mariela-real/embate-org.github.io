@@ -137,6 +137,7 @@ return [
         // 'email' => [
         //     'required' => 'El correo electrónico es obligatorio'
         // ]
+
     ],
 
     /*
@@ -157,7 +158,11 @@ return [
         'lastname'=>'apellido',
         'urlphoto'=>'imagen',
         'description'=>'descripción',
-        'order'=>'orden'
+        'order'=>'orden',
+        'g-recaptcha-response'=>'casilla',
+        'subject'=>'asunto',
+        'date'=>'fecha',
+
     ],
 
 ];

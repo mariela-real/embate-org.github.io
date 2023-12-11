@@ -23,11 +23,12 @@ class RequestServiceRequest extends FormRequest
      */
     public function rules()
     {
-        return 
+        return
         [
             'firstname'=>'required|min:3|max:25',
             'lastname'=>'required|min:3|max:25',
             'email'=>'required|string|email|max:30',
+            'phone'=>'required|integer',
             'subject'=>'required',
             'message'=>'max:400',
             'date'=>'required|date',

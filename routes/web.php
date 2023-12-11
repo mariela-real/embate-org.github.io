@@ -38,9 +38,9 @@ Route::get('/mission', function () {
 });
 
 
-Route::get('/service', function () {
+/*Route::get('/service', function () {
     return view('contact.advice');
-});
+});*/
 Route::get('/fecha', function(){
     return view('inbox.reply_message');
 });
@@ -60,7 +60,11 @@ Route::get('/work', [WorkController::class, 'showWork'])->name('work');
 Route::get('/pre_incubation', [ProcessController::class, 'showPreIncubation'])->name('pre_incubation');
 Route::get('/incubation', [ProcessController::class, 'showIncubation'])->name('incubation');
 Route::get('/post_incubation', [ProcessController::class, 'showPostIncubation'])->name('post_incubation');
+Route::get('/service', [ServiceRequestsController::class, 'searchByDate'])->name('service');
 Route::post('/service', [ServiceRequestsController::class, 'sendScheduleAdvice'])->name('service');
+
+
+
 
  /* ------------------------------------RUTAS CON INICIO DE SESION---------------------------------------- */
 Route::group(['middleware' => 'auth'], function() {

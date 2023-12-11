@@ -1,6 +1,6 @@
 body{
     margin: 0;
-    
+
 }
 .content{
     background-color: rgb(0, 0, 0);
@@ -14,16 +14,16 @@ body{
     display: flex;
     --swiper-theme-color: #000000;
     overflow: hidden;
-   
+
   }
 img{
     height: 537px;
     width: 100%;
     object-fit: contain;
-   
+
 }
 
-.swiper-button-prev{  
+.swiper-button-prev{
     --swiper-navigation-size: 40px;
     color: white;
     background-color: black;
@@ -39,7 +39,7 @@ img{
     color: rgb(0, 0, 0);
     background-color: rgb(255, 255, 255);
 
-}  
+}
 .swiper-button-next{
     --swiper-navigation-size: 40px;
     color: white;
@@ -55,12 +55,12 @@ img{
     opacity: 1;
     color: rgb(0, 0, 0);
     background-color: rgb(255, 255, 255);
-}  
+}
 
 .swiper-pagination{
     margin-bottom: 30px;
     background: transparent;
-    
+
 }
 
 .swiper-scrollbar{
@@ -74,7 +74,7 @@ img{
         width: 100%;
         object-fit: contain;
     }
-    
+
 }
 
 .swiper-pagination{
@@ -84,7 +84,7 @@ img{
     --swiper-pagination-bullet-inactive-opacity: 0.22;
     --swiper-pagination-bullet-opacity: 1;
     --swiper-pagination-bullet-horizontal-gap: 2px;
-    
+
 }
 
 .swiper-pagination-bullet{
