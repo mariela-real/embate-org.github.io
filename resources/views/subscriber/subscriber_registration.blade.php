@@ -11,8 +11,8 @@
 <footer>
     <div class="content__footer">
         <div class="content__info">
-            <h1>Únete a nuestro equipo</h1>
-            <p>Obtenga las ultimas noticias, eventos, talleres y mas.</p>
+            <h1>Únete a nuestra comunidad</h1>
+            <p>Mantente siempre actualizado con las últimas noticias, eventos imperdibles, talleres y mas.</p>
             <p>
                 ¡<strong>EMBATE</strong> es una buena idea!
             </p>
@@ -43,9 +43,9 @@
                     <span class="text-danger">{{ $errors->first('email') }}</span>
                     @endif
                 </div>
-                
+
             </div>
-            
+
        </form>
        <div class="button_join">
         <button type="submit" class="button__start">UNIRME</a>

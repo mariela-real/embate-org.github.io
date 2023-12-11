@@ -127,3 +127,15 @@ img{
     color: rgb(56, 181, 190);
 
 }
+.text-overlay {
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 10%; /* Ajusta según sea necesario */
+}
+
+.see__more-container {
+    width: 100%;
+}

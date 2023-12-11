@@ -14,9 +14,8 @@
             @forelse ($carousel as $item)
                 <div class="swiper-slide">
                     <img src="img/carousel/{{$item->urlphoto}}" class="d-block w-100">
-                    <div class="text-overlay left see__more">
-                        <h5>{{$item->description}}</h5>
-                        <a href="{{$item->link}}" class="button__seeMore"> Ver mas</a>
+                    <div class="text-overlay see__more-container">
+                        <a href="{{$item->link}}" class="button__seeMore text-overlay see__more"> Ver mas</a>
                     </div>
                 </div>
             @empty
