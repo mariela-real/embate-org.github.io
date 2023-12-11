@@ -20,7 +20,6 @@ class ServiceRequestsController extends Controller
         $service_requests->lastname = $request->lastname;
         $service_requests->email = $request->email;
         $service_requests->phone = $request->phone;
-        //$service_requests->country_code = $request->country_code;
         $service_requests->subject = $request->subject;
         $service_requests->message = $request->message;
         $service_requests->date = $request->date;
