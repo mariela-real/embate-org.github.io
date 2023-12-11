@@ -13,12 +13,10 @@
         <div class="swiper-wrapper">
             @forelse ($carousel as $item)
                 <div class="swiper-slide">
-                    <div class="slide-content">
-                        <img src="img/carousel/{{$item->urlphoto}}" class="d-block w-100">
-                        <div class="text-overlay left">
-                            <h5>{{$item->description}}</h5>
-                            <a href="{{$item->link}}" class="btn btn-danger">Ver más</a>
-                        </div>
+                    <img src="img/carousel/{{$item->urlphoto}}" class="d-block w-100">
+                    <div class="text-overlay left see__more">
+                        <h5>{{$item->description}}</h5>
+                        <a href="{{$item->link}}" class="button__seeMore"> Ver mas</a>
                     </div>
                 </div>
             @empty
