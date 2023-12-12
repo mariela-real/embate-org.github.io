@@ -8,17 +8,28 @@
             <div class="jumbotron">
                 <div class="form-group">
 
-                    <label for="description">Ingrese un nombre</label>
+                    <label for="description">Ingrese una descripción</label>
                     {!! Form::textarea('description',null, ['class'=>'ckeditor form-control'])!!}
+                    @if ($errors->has('description'))
+                    <span class="text-danger">{{ $errors->first('description') }}</span>
+                    @endif
+
 
                 </div>
                 <div class="form-group">
                     <label for="name">Ingrese un nombre</label>
                     {!! Form::text('name',null, ['class'=>'form-control'])!!}
+                    @if ($errors->has('name'))
+                    <span class="text-danger">{{ $errors->first('name') }}</span>
+                    @endif
+
                 </div>
                 <div class="form-group">
                     <label for="order">Ingrese un orden</label>
                     {!! Form::text('order',null, ['class'=>'form-control'])!!}
+                    @if ($errors->has('order'))
+                    <span class="text-danger">{{ $errors->first('order') }}</span>
+                    @endif
                 </div>
             </div>
             {!! Form::submit('Guardar',['class'=>'btn btn-success']) !!}

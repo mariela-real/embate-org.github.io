@@ -17,7 +17,7 @@
         <div class="footer_contact">
             <!-- contact_logo  controla propiedades del logo-->
             <div class="contact_logo">
-                <img src="{{asset('img/OSOS_EMBATE.png')}}" alt="">
+                <img src="{{asset('img/LOGO_letras_blancas.png')}}" alt="">
             </div>
             <!-- contact_info  controla los texto de contacto y direccion-->
             <div class="contact_info">

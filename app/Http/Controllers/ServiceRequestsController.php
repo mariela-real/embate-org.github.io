@@ -32,7 +32,7 @@ class ServiceRequestsController extends Controller
 
     public function searchByDate()
     {
-        $dateSelected = "2023-12-16";
+        $dateSelected = "2023-12-20";
         $availableTimes = $this->timeSelected();
 
         $occupiedTimes = ServiceRequests::where('date', $dateSelected)

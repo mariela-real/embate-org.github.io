@@ -162,6 +162,7 @@ return [
         'g-recaptcha-response'=>'casilla',
         'subject'=>'asunto',
         'date'=>'fecha',
+        'name'=>'nombre'
 
     ],
 
