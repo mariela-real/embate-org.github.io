@@ -62,7 +62,7 @@ Route::get('/incubation', [ProcessController::class, 'showIncubation'])->name('i
 Route::get('/post_incubation', [ProcessController::class, 'showPostIncubation'])->name('post_incubation');
 Route::get('/service', [ServiceRequestsController::class, 'searchByDate'])->name('service');
 Route::post('/service', [ServiceRequestsController::class, 'sendScheduleAdvice'])->name('service');
-
+Route::post('/update_date', 'ServiceRequestsController@updateDate')->middleware('web');
 
 
 

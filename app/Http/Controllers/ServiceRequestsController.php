@@ -32,7 +32,9 @@ class ServiceRequestsController extends Controller
 
     public function searchByDate()
     {
-        $dateSelected = "2023-12-20";
+       $dateSelected = "2023-12-20";
+      // $dateSelected =$this->updateDate();
+     //  dd($dateSelected);
         $availableTimes = $this->timeSelected();
 
         $occupiedTimes = ServiceRequests::where('date', $dateSelected)
@@ -44,6 +46,11 @@ class ServiceRequestsController extends Controller
          //   dd($newAvailableTimes);
 
         return view("contact.advice", compact('newAvailableTimes'));
+    }
+    public function updateDate(RequestServiceRequest $request)
+    {
+        $dateSelected = $request->input('res');
+        return $dateSelected;
     }
     public function timeSelected()
     {

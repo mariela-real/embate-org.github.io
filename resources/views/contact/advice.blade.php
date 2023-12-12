@@ -37,20 +37,20 @@
 
                     <div class="swiper-slide">
                         <div class="image-group">
-                            <img src="img/corporation/2.jpeg" alt="Imagen 1">
-                            <img src="img/corporation/5.jpeg" alt="Imagen 1">
-                            <img src="img/corporation/3.jpeg" alt="Imagen 1">
-                            <img src="img/corporation/4.jpeg" alt="Imagen 1">
-                            <img src="img/corporation/5.jpeg" alt="Imagen 1">
+                            <img src="img/corporation/1.jpeg" alt="Imagen 1">
+                            <img src="img/corporation/2.jpeg" alt="Imagen 2">
+                            <img src="img/corporation/3.jpeg" alt="Imagen 3">
+                            <img src="img/corporation/4.jpeg" alt="Imagen 4">
+                            <img src="img/corporation/5.jpeg" alt="Imagen 5">
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="image-group">
-                            <img src="img/corporation/6.jpeg" alt="Imagen 1">
-                            <img src="img/corporation/7.jpeg" alt="Imagen 1">
-                            <img src="img/corporation/8.jpeg" alt="Imagen 1">
-                            <img src="img/corporation/9.jpeg" alt="Imagen 1">
-                            <img src="img/corporation/10.jpeg" alt="Imagen 1">
+                            <img src="img/corporation/6.jpeg" alt="Imagen 6">
+                            <img src="img/corporation/7.jpeg" alt="Imagen 7">
+                            <img src="img/corporation/8.jpeg" alt="Imagen 8">
+                            <img src="img/corporation/9.jpeg" alt="Imagen 9">
+                            <img src="img/corporation/10.jpeg" alt="Imagen 10">
                         </div>
                     </div>
                     <div class="swiper-slide">

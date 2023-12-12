@@ -89,13 +89,27 @@
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
      <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
      <script>
-       $('.date').on('change', function () {
-         var res = $('.date').val();
-         document.getElementById('result').innerHTML = res;
+$('.date').on('change', function () {
+    var res = $('.date').val();
+    $('#result').html(res);
 
-         // Actualizar la página
-       //  window.location.reload();
-       });
+    $.ajaxSetup({
+        headers: {"X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr('content')},
+    });
+        $.ajax({
+        method: "POST",
+        url: "/update_date",
+        data: {dateSelected: res, _token: $('meta[name="csrf-token"]').attr('content')},
+        success: function(result) {
+            console.log(result);
+        },
+        error: function(error) {
+            console.error("Error in AJAX request:", error);
+        }
+    });
+
+});
+
      </script>
 
 
