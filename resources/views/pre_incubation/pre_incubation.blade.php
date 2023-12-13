@@ -29,7 +29,7 @@
         </div>
         <!-- preIncubation__logo controla la parte del logo de la pagina-->
         <div class="preIncubation__logo">
-                <img src="{{asset('img/preIncubacion.jpg')}}" alt="">
+                <img src="{{asset('img/plan.jpeg')}}" alt="">
 
         </div>
     </div>

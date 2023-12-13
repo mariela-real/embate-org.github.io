@@ -168,3 +168,13 @@
     }
   }
 
+  .owl-carousel .item {
+    height: 10rem;
+    background: #ffffff;
+   /* padding: 1rem;*/
+  }
+  .owl-carousel .item h4 {
+    color: #FFF;
+    font-weight: 400;
+    margin-top: 0rem;
+   }

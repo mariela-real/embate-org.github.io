@@ -29,7 +29,7 @@
         </div>
         <!-- incubation__logo controla la parte del logo de la pagina-->
         <div class="incubation__logo">
-            <img src="{{asset('img/preIncubacion.jpg')}}" alt="">
+            <img src="{{asset('img/CAMPAMENTO DE MOTIV_2.png')}}" alt="">
         </div>
     </div>
 
@@ -63,7 +63,7 @@
                 a identificar el crecimiento y desarrollo empresarial, se lo realiza
                 mínimamente 1 vez al año.</div>
             <div class="texto">Asesoramiento investigativo, técnico de
-                la unidad</div>
+                la unidad, proporciona a los emprendedores los conocimientos y la dirección necesarios para optimizar sus operaciones, tomar decisiones estratégicas fundamentadas y mantenerse competitivos en su mercado</div>
             <div class="texto">Cada semestre de deberá
                 realizar una evaluación a cada emprendedor de los alcances obtenidos
                 donde se realizará reforzamientos de estrategias en caso de ser
@@ -98,7 +98,7 @@
 
                 <div class="textos">
                     <div class="texto">Asesoramiento investigativo, técnico de
-                        la unidad.</div>
+                        la unidad, proporcionando a los emprendedores los conocimientos y la dirección necesarios para optimizar sus operaciones, tomar decisiones estratégicas fundamentadas y mantenerse competitivos en su mercado</div>
                 </div>
             </div>
             <div class="item">

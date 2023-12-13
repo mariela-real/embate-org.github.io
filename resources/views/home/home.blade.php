@@ -10,12 +10,16 @@
 <body>
     <div class="content">
         <!-- Slider tipo swiper -->
-        <div class="swiper-wrapper">
+        <div class="swiper">
+            <!-- clase q controla todo el slide -->
+            <div class="swiper-wrapper">
+            <!-- Slides -->
             @forelse ($carousel as $item)
                 <div class="swiper-slide">
                     <img src="img/carousel/{{$item->urlphoto}}" class="d-block w-100">
-                    <div class="text-overlay see__more-container">
-                        <a href="{{$item->link}}" class="button__seeMore text-overlay see__more"> Ver mas</a>
+                    <div class="text-overlay left">
+                        <h5>{{$item->description}}</h5>
+                       {{--<a href="{{$item->link}}" class="btn btn-danger"> Ver mas</a>--}}
                     </div>
                 </div>
             @empty
@@ -35,7 +39,3 @@
 </body>
 </html>
 @endsection
-
-
-
-

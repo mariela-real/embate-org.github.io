@@ -34,7 +34,7 @@ class CarouselHomeController extends Controller
             $image = $request->file('urlphoto');
             $newName ='carousel_'.time().'.'.$image->guessExtension();
             Image::make($image->getRealPath())
-            ->fit(1200, 450, function($constraint){ $constraint->upsize(); })
+            ->fit(1200, 500, function($constraint){ $constraint->upsize(); })
             ->save(public_path('/img/carousel/'.$newName));
 
             $carousel->urlphoto = $newName;

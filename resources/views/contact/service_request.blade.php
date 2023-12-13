@@ -63,8 +63,7 @@
                     @if ($errors->has('date'))
                             <span class="text-danger">{{ $errors->first('date') }}</span>
                     @endif
-                    <br>
-                    <div id="result">Fecha seleccionada: </div>
+
                 </div>
                 <br>
                 <div class="row">
