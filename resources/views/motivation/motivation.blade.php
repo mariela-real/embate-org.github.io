@@ -39,24 +39,35 @@
         <div class="grid-container">
             <!-- grid__item controla cada una de los items ya sea titulo , imagen , descripcion y el boton de ver mas-->
             <div class="grid__item">
-                <h2>Talleres y seminarios</h2>
-                <img src="{{ asset('img/taller2.jpg') }}" alt="">
-                <p>Texto para Talleres y seminarios...</p>
-                <button type="submit" class="button__link">Ver más</button>
+                <h2>Talleres y cursos</h2>
+                <img src="{{ asset('img/mark.jpg') }}" alt="">
+                <p>La Incubadora de Empresas de Base Tecnológica está comprometida con la necesidad de los emprendedores. 🤝
+                    ¡No te pierdas nuestro curso de marketing 100% gratuito!  </p>
+                <button type="submit" class="button__link2">
+                    <a href="https://forms.gle/YNPuxEaX9APVUV4d6">Ver más</a>
+                </button>
             </div>
 
             <div class="grid__item">
-                <h2>Capacitaciones</h2>
-                <img src="{{ asset('img/motivationGrid.jpg') }}" alt="">
-                <p>Texto para Capacitaciones...</p>
-                <button type="submit" class="button__link">Ver más</button>
+                <h2>Recursos</h2>
+                <img src="{{ asset('img/periodico.jpg') }}" alt="">
+                <p>¡Descubre el fascinante mundo de la innovación en nuestro periódico!
+                    Sumérgete en las emocionantes actividades de nuestra Incubadora de Empresas de Base Tecnológica y mantente al tanto de las últimas actividades en emprendimiento. 🚀📰 </p>
+                    <button type="submit" class="button__link2">
+                        <a href="https://drive.google.com/file/d/1yB46cyFvdZ2cqdGf_bxXm_uXN6h96pew/view?fbclid=IwAR2EVzqjpezH4FTuQ_OrQZCV-MRYBeFYFXZ55aDCbAcSf6adR8vyYPHhQWw">Ver más</a>
+                    </button>
             </div>
 
             <div class="grid__item">
-                <h2>Cursos</h2>
-                <img src="{{ asset('img/curso.jpg') }}" alt="">
-                <p>Texto para Cursos...</p>
-                <button type="submit" class="button__link">Ver más</button>
+                <h2>Eventos</h2>
+                <img src="{{ asset('img/401842295_669057992004429_426031761365349069_n.jpg') }}" alt="">
+                <p>Se tiene  la invitación al foro Internacional de Innovación y Tecnología, donde visionarios de todo el mundo se reunirán para inspirar y explorar ideas de base tecnológica.
+                    ¡Activatech 2023!.</p>
+                <button type="submit" class="button__link2">
+                    <a href="https://icam.clicket.bo/evento/activatechcbba2023">Ver más</a>
+                </button>
+
+
             </div>
         </div>
     </div>
