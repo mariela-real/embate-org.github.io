@@ -27,8 +27,8 @@ class RequestServiceRequest extends FormRequest
         [
             'firstname'=>'required|min:3|max:25',
             'lastname'=>'required|min:3|max:25',
-            'email'=>'required|string|email|max:30',
-            'phone'=>'required|integer',
+            'email'=>'required|string|email|max:40',
+            'phone'=>'required',
             'subject'=>'required',
             'message'=>'max:400',
             'date'=>'required|date',

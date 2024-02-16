@@ -19,7 +19,7 @@ class ServiceRequestsController extends Controller
         $service_requests->firstname = $request->firstname;
         $service_requests->lastname = $request->lastname;
         $service_requests->email = $request->email;
-        $service_requests->phone = $request->phone;
+        $service_requests->phone = $request['phone']['full'];
         $service_requests->subject = $request->subject;
         $service_requests->message = $request->message;
         $service_requests->date = $request->date;
@@ -27,11 +27,13 @@ class ServiceRequestsController extends Controller
         $service_requests->state = "sent";
         $service_requests->save();
 
-        return redirect()->route('service')->with('register', 'ok');
+        return redirect()->route('service');
     }
+
 
     public function searchByDate()
     {
+
        $dateSelected = "2023-12-20";
       // $dateSelected =$this->updateDate();
      //  dd($dateSelected);
@@ -49,12 +51,12 @@ class ServiceRequestsController extends Controller
     }
     public function updateDate(RequestServiceRequest $request)
     {
-        $dateSelected = $request->input('res');
+        $dateSelected = $request->input('date');
         return $dateSelected;
     }
     public function timeSelected()
     {
-        $availableTimes = array('08:30:00', '08:50:00', '09:10:00', '09:30:00', '09:50:00', '10:10:00');
+        $availableTimes = array(' ','08:30:00', '08:50:00', '09:10:00', '09:30:00', '09:50:00', '10:10:00');
         return $availableTimes;
     }
 

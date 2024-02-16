@@ -51,9 +51,9 @@ class ProcessIncubationController extends Controller
         ->fit(1200, 450, function($constraint){ $constraint->upsize(); })
         ->save(public_path('/img/process/'.$newName));
 
-        $team->urlphoto = $newName;
+        $process->urlphoto = $newName;
 	    }
-	$team->save();
+	$process->save();
 	return redirect('/process_motivation');
 
     }

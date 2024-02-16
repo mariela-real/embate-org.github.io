@@ -25,7 +25,6 @@
                     <h1>{{ $process->title }}</h1>
                     <p>{!! $process->description !!}</p>
                 </div>
-                <!-- motivation__logo controla el logo de la pagina motivacion -->
                 <div class="motivation__logo">
                     <img src="{{ asset('img/process/' . $process->urlphoto) }}" alt="">
                 </div>
@@ -33,11 +32,8 @@
         @endif
     @endisset
 
-    <!-- motivation_grid controla toda la parte del grid de la pagina de motivacion emprendedora -->
     <div class="motivation_grid">
-        <!-- grid-container es la clase asociada a grid la cual permite controlar el numero de columnas y todo lo relacionado -->
         <div class="grid-container">
-            <!-- grid__item controla cada una de los items ya sea titulo , imagen , descripcion y el boton de ver mas-->
             <div class="grid__item">
                 <h2>Talleres y cursos</h2>
                 <img src="{{ asset('img/mark.jpg') }}" alt="">
@@ -66,16 +62,12 @@
                 <button type="submit" class="button__link2">
                     <a href="https://icam.clicket.bo/evento/activatechcbba2023">Ver más</a>
                 </button>
-
-
             </div>
         </div>
     </div>
 
     <div class="content_swiper">
-        <!-- Slider tipo swiper -->
         <div class="swiper">
-            <!-- clase que controla todo el slide -->
             <div class="swiper-wrapper">
                 @forelse ($carousel as $item)
                     <div class="swiper-slide">
@@ -87,10 +79,8 @@
                         <i class="fa-solid fa-quote-right icon_end"></i>
                     </div>
                 @empty
-                    <!-- Mensaje o comportamiento para cuando no hay elementos en el carousel -->
                 @endforelse
             </div>
-            <!-- botones previo y siguiente del slide -->
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
         </div>

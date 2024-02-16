@@ -96,7 +96,7 @@ return [
     'password'             => 'La contraseña es incorrecta.',
     'present'              => 'El campo :attribute debe estar presente.',
     'regex'                => 'El formato del campo :attribute es inválido.',
-    'required'             => 'El campo :attribute es obligatorio.',
+    'required'             => 'Es un campo obligatorio.',
     'required_if'          => 'El campo :attribute es obligatorio cuando el campo :other es :value.',
     'required_unless'      => 'El campo :attribute es requerido a menos que :other se encuentre en :values.',
     'required_with'        => 'El campo :attribute es obligatorio cuando :values está presente.',
@@ -156,13 +156,14 @@ return [
         'username'=>'usuario',
         'firstname'=>'nombre',
         'lastname'=>'apellido',
-        'urlphoto'=>'imagen',
+        'urlphoto'=>'imágen',
         'description'=>'descripción',
         'order'=>'orden',
         'g-recaptcha-response'=>'casilla',
         'subject'=>'asunto',
         'date'=>'fecha',
-        'name'=>'nombre'
+        'name'=>'nombre',
+        'phone'=>'número'
 
     ],
 
