@@ -23,4 +23,15 @@ class ServiceRequests extends Model
 
 
         ];
+    function __construct() {}
+    public function setTime($time)
+    {
+        $this->time = $time;
+    }
+
+    public function getTime()
+    {
+        return $this->time;
+    }
+
 }

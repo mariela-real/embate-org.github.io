@@ -33,7 +33,7 @@
             @if ($errors->has('email'))
                  <span class="text-danger">{{ $errors->first('email') }}</span>
             @endif
-            <input type="tel" name="phone[main]" id="phone_number" value="{{ old('phone[main]') }}" />
+            <input type="tel" name="phone[main]" id="phone_number" value="{{ old('phone[full]') }}" />
            <br>
             @if ($errors->has('phone'))
             <span class="text-danger">{{ $errors->first('phone') }}</span>
@@ -66,15 +66,17 @@
             <div class="row">
                 <div class="col-5">
                     <select name="time" id="time" value="{{ old('time') }}"class="form-select">
-                        @foreach ($newAvailableTimes as $time)
-                        <option value="{{ $time }}">{{ $time }}</option>
+                        @foreach ($newAvailableTimes2 as $time)
+                            <option value="{{ $time }}">{{ $time }}</option>
                         @endforeach
                     </select>
                 </div>
                 @if ($errors->has('time'))
                     <span class="text-danger">{{ $errors->first('time') }}</span>
                 @endif
+
             </div>
+            <br>
             <div class="g-recaptcha" data-sitekey="6Lcz_sMoAAAAAKlWj_K7PTb4AHeFUwI7fxJvFdZG"></div>
             @error('g-recaptcha-response')
             <span class="text-danger">{{ $message }}</span>
@@ -83,8 +85,6 @@
          </form>
      </div>
      <script type="text/javascript" src="{{asset('js/form.js')}}"></script>
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
      <script>
         var phone_number = window.intlTelInput(document.querySelector("#phone_number"), {
@@ -98,11 +98,34 @@
         $("input[name='phone_number[full]'").val(full_number);
         });
     </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#date').change(function() {
+                var selectedDate = $(this).val();
+
+                $.ajax({
+                    type: 'POST',
+                    url: '/update_date',
+                    data: {
+                        '_token': '{{ csrf_token() }}',
+                        'date': selectedDate
+                    },
+                    success: function(data) {
+                        var timesSelect = $('#time');
+                        timesSelect.empty();
+                        $.each(data, function(index, value) {
+                            timesSelect.append($('<option>').text(value).attr('value', value));
+                        });
+                    }
+                });
+            });
+        });
+    </script>
     <script>
         document.getElementById('date').addEventListener('change', function() {
             var selectedDate = this.value;
             localStorage.setItem('selectedDate', selectedDate);
-            location.reload();
         });
 
         document.addEventListener('DOMContentLoaded', function() {
@@ -114,9 +137,21 @@
         });
     </script>
 
+    <script>
+    document.getElementById('date').addEventListener('change', function() {
+        var selectedDate = this.value;
+        localStorage.setItem('selectedDate', selectedDate);
+        location.reload();
+    });
 
-
-
+    document.addEventListener('DOMContentLoaded', function() {
+        var selectedDate = localStorage.getItem('selectedDate');
+        if (selectedDate) {
+            document.getElementById('date').value = selectedDate;
+        }
+        console.log(selectedDate)
+    });
+    </script>
    </body>
 
 </html>
