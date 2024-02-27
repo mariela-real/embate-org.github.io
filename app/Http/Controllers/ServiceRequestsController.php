@@ -16,12 +16,6 @@ class ServiceRequestsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    protected $availableSchedules;
-
-    public function __construct()
-    {
-        $this->availableSchedules = new AvailableDate();
-    }
 
     public function sendScheduleAdvice(RequestServiceRequest $request)
     {
@@ -45,28 +39,18 @@ class ServiceRequestsController extends Controller
         $requests = ServiceRequests::all();
         return view("contact.advice", compact('requests'));
     }
-    public function updateDate(RequestServiceRequest $request)
+    public function updateDate()
     {
-       $dateSelected = $request->input('date');//02-08-2024
-      //  $dateSelected = Http::get('http://127.0.0.1:8000/update_date');
-      //  $dateSelected = json_decode($response->body(), true);
+        $dateSelected = '2024-02-08';
         $availableTimes = $this->timeAvailablesTimes();
         $occupiedTimes = ServiceRequests::where('date', $dateSelected)
             ->pluck('time')
             ->toArray();
-
         $newAvailableTimes = array_diff($availableTimes, $occupiedTimes);
 
-        $this->availableSchedules->setSchedule($newAvailableTimes);
-        dd($newAvailableTimes);
-        return $newAvailableTimes;
+        return view("contact.advice", compact('newAvailableTimes'));
     }
 
-    public function updateDate_v()
-    {
-        $newAvailableTimes2 =  $this->availableSchedules->getSchedule();
-        return view("contact.advice", compact('newAvailableTimes2'));
-    }
 
     public function timeAvailablesTimes()
     {
@@ -75,6 +59,11 @@ class ServiceRequestsController extends Controller
     }
     public function timeSelected()
     {
+        //TODO I need to get data from DB, then I need to return those after validate
+        /*$occupiedTimes = ServiceRequests::where('date', $dateSelected)
+            ->pluck('time')
+            ->toArray();*/
+
         $availableTimes = array(' ','08:30:00', '08:50:00', '09:10:00', '09:30:00', '09:50:00', '10:10:00');
         return view("contact.advice", compact('availableTimes'));
     }

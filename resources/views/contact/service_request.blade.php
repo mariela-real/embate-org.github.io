@@ -66,7 +66,7 @@
             <div class="row">
                 <div class="col-5">
                     <select name="time" id="time" value="{{ old('time') }}"class="form-select">
-                        @foreach ($newAvailableTimes2 as $time)
+                        @foreach ($newAvailableTimes as $time)
                             <option value="{{ $time }}">{{ $time }}</option>
                         @endforeach
                     </select>
@@ -100,32 +100,10 @@
     </script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        $(document).ready(function() {
-            $('#date').change(function() {
-                var selectedDate = $(this).val();
-
-                $.ajax({
-                    type: 'POST',
-                    url: '/update_date',
-                    data: {
-                        '_token': '{{ csrf_token() }}',
-                        'date': selectedDate
-                    },
-                    success: function(data) {
-                        var timesSelect = $('#time');
-                        timesSelect.empty();
-                        $.each(data, function(index, value) {
-                            timesSelect.append($('<option>').text(value).attr('value', value));
-                        });
-                    }
-                });
-            });
-        });
-    </script>
-    <script>
         document.getElementById('date').addEventListener('change', function() {
             var selectedDate = this.value;
             localStorage.setItem('selectedDate', selectedDate);
+            location.reload();
         });
 
         document.addEventListener('DOMContentLoaded', function() {
@@ -134,24 +112,10 @@
                 document.getElementById('date').value = selectedDate;
             }
             console.log(selectedDate)
+
         });
     </script>
 
-    <script>
-    document.getElementById('date').addEventListener('change', function() {
-        var selectedDate = this.value;
-        localStorage.setItem('selectedDate', selectedDate);
-        location.reload();
-    });
-
-    document.addEventListener('DOMContentLoaded', function() {
-        var selectedDate = localStorage.getItem('selectedDate');
-        if (selectedDate) {
-            document.getElementById('date').value = selectedDate;
-        }
-        console.log(selectedDate)
-    });
-    </script>
    </body>
 
 </html>

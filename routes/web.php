@@ -60,11 +60,9 @@ Route::get('/work', [WorkController::class, 'showWork'])->name('work');
 Route::get('/pre_incubation', [ProcessController::class, 'showPreIncubation'])->name('pre_incubation');
 Route::get('/incubation', [ProcessController::class, 'showIncubation'])->name('incubation');
 Route::get('/post_incubation', [ProcessController::class, 'showPostIncubation'])->name('post_incubation');
-Route::get('/service', [ServiceRequestsController::class, 'updateDate_v'])->name('service');
+Route::get('/service', [ServiceRequestsController::class, 'updateDate'])->name('service');
 Route::post('/service', [ServiceRequestsController::class, 'sendScheduleAdvice'])->name('service');
-//Route::post('/update_date', [ServiceRequestsController::class])->name('update_date');
-//Route::get('/update_date', [ServiceRequestsController::class,'updateDate_v'])->name('update_date');
-//Route::get('/xd', [ServiceRequestsController::class, 'updateDate'])->name('service');
+
 
 
 
